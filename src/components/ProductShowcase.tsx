@@ -1,5 +1,5 @@
 import packageFront from '../assets/images/package-front.webp'
-import padFramed from '../assets/images/pad-framed.webp'
+import backDesign from '../assets/images/back-design.webp'
 import showcaseBg from '../assets/backgrounds/leaves-bowl.webp'
 import Reveal from './Reveal'
 import SectionBackground from './SectionBackground'
@@ -64,47 +64,56 @@ export default function ProductShowcase() {
           </div>
         </div>
 
-        {/* Back design secondary visual */}
-        <Reveal className="mt-24 grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="order-2 lg:order-1">
-            <p className="section-label">
-              <span className="h-px w-8 bg-gold-400" />
-              Pad Structure
-            </p>
-            <h3 className="mt-4 font-display text-2xl text-plum-900 sm:text-3xl">
-              A closer look at what protects you
-            </h3>
-            <p className="mt-5 text-base leading-relaxed text-plum-800/75">
-              The herbal comfort patch runs through the centre of every Melicura pad — visible
-              from the extra-long, wider-back design engineered for confident, all-round
-              protection.
-            </p>
-            <ul className="mt-6 space-y-3 text-sm text-plum-800/80">
-              <li className="flex items-center gap-3">
-                <span className="h-1.5 w-1.5 rounded-full bg-gold-500" /> Extra long length for
-                long-lasting protection
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="h-1.5 w-1.5 rounded-full bg-gold-500" /> Herbal comfort patch at
-                the core
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="h-1.5 w-1.5 rounded-full bg-gold-500" /> Wider back with dual
-                wings for extra security
-              </li>
-            </ul>
+        {/* Back design secondary visual with 3D Anatomy */}
+        <Reveal className="mt-24 grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12">
+          <div className="order-2 lg:order-1 lg:col-span-5">
+            <div className="rounded-3xl border border-plum-900/10 bg-cream-50/95 p-8 sm:p-10 shadow-card backdrop-blur-md">
+              <p className="section-label">
+                <span className="h-px w-8 bg-gold-500" />
+                Pad Structure &amp; Anatomy
+              </p>
+              <h3 className="mt-4 font-display text-2xl font-bold text-plum-950 sm:text-3xl">
+                A closer look at what protects you
+              </h3>
+              <p className="mt-5 text-base leading-relaxed text-plum-900/85">
+                The herbal comfort patch runs through the centre of every Melicura pad — engineered with a 6-layer 3D anatomy, extra-long length, and wider-back design for confident, all-round protection.
+              </p>
+              <ul className="mt-6 space-y-3.5 text-sm font-medium text-plum-900">
+                <li className="flex items-center gap-3">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold-400/20 text-xs font-bold text-gold-700">✓</span>
+                  <span>Extra long 280mm length for long-lasting protection</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold-400/20 text-xs font-bold text-gold-700">✓</span>
+                  <span>Herbal comfort patch at the core with natural extracts</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold-400/20 text-xs font-bold text-gold-700">✓</span>
+                  <span>3D Anatomy of Comfort: 6-layer quick-absorbing protection</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold-400/20 text-xs font-bold text-gold-700">✓</span>
+                  <span>Wider back with dual wings for stay-in-place security</span>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="order-1 lg:order-2">
-            <div className="relative mx-auto max-w-xs">
-              <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-plum-800" />
-              <img
-                src={padFramed}
-                alt="Melicura pad structure showing the herbal comfort patch and extra long design"
-                className="w-full rounded-2xl shadow-card"
-                loading="lazy"
-                width={700}
-                height={970}
-              />
+          <div className="order-1 lg:order-2 lg:col-span-7">
+            <div className="relative mx-auto w-full">
+              <div className="absolute -inset-4 -z-10 rounded-[2.5rem] bg-gradient-to-tr from-plum-900/25 via-gold-400/15 to-transparent blur-xl" />
+              <div className="overflow-hidden rounded-2xl border border-plum-900/15 bg-plum-950/20 p-2 shadow-2xl backdrop-blur-sm sm:p-3">
+                <img
+                  src={backDesign}
+                  alt="Melicura Pad 3D Anatomy of Comfort and 6-layer structure"
+                  className="w-full rounded-xl shadow-lg transition-transform duration-500 hover:scale-[1.01]"
+                  loading="lazy"
+                  width={1300}
+                  height={969}
+                />
+              </div>
+              <p className="mt-3 text-center text-xs font-semibold text-plum-900/70">
+                Packaging back view showing the 3D Anatomy of Comfort &amp; 6-Layer Protection
+              </p>
             </div>
           </div>
         </Reveal>
