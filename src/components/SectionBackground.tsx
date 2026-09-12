@@ -44,7 +44,7 @@ export default function SectionBackground({
   const parallaxRef = useParallax<HTMLImageElement>(0.12)
 
   return (
-    <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+    <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
       <img
         ref={parallax ? parallaxRef : undefined}
         src={src}

@@ -34,12 +34,6 @@ export default function Navbar() {
     return () => observer.disconnect()
   }, [])
 
-  useEffect(() => {
-    document.body.style.overflow = open ? 'hidden' : ''
-    return () => {
-      document.body.style.overflow = ''
-    }
-  }, [open])
 
   return (
     <header
