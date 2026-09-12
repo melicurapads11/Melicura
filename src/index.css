@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream-50 text-plum-900 font-body antialiased;
+  }
+
+  ::selection {
+    @apply bg-gold-400/40 text-plum-900;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-cream-100;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-plum-700/40 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-plum-700/60;
+  }
+
+  /* Accessible, on-brand focus ring for every interactive element */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid theme('colors.gold.400');
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* Ambient decoration: slow background zoom + drifting leaf particles */
+  .leaf-particle {
+    will-change: transform, opacity;
+  }
+
+  .section-label {
+    @apply inline-flex items-center gap-2 text-gold-600 text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-400 px-7 py-3.5 text-sm font-semibold tracking-wide text-plum-900 shadow-gold transition-all duration-300 ease-out hover:bg-gold-300 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-[0.97] active:duration-100;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-cream-200/40 px-7 py-3.5 text-sm font-semibold tracking-wide text-cream-50 transition-all duration-300 ease-out hover:border-gold-400 hover:text-gold-300 hover:-translate-y-0.5 active:scale-[0.97] active:duration-100;
+  }
+
+  .btn-outline-plum {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-plum-700/30 px-7 py-3.5 text-sm font-semibold tracking-wide text-plum-800 transition-all duration-300 ease-out hover:border-plum-700 hover:bg-plum-800 hover:text-cream-50 hover:-translate-y-0.5 active:scale-[0.97] active:duration-100;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-bg-zoom {
+    animation: none !important;
+    transform: none !important;
+  }
+  .leaf-particle-layer {
+    display: none !important;
+  }
+  [data-parallax] {
+    transform: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
