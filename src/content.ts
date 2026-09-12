@@ -16,7 +16,7 @@ export const contact = {
   careAddress:
     'No. 4/654, 9th Street, Vinayagapuram, Karanipuduchery, Urappakkam, Changalpattu, Chennai - 606210, Tamil Nadu, India.',
   phone: '+91 99405 40837 / +91 91765 07750',
-  email: 'care@melicura.in',
+  email: 'melicurapads@gmail.com',
 }
 
 export const productSpec = {
