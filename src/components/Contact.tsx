@@ -53,8 +53,10 @@ export default function Contact() {
           {/* Contact info */}
           <Reveal className="lg:col-span-2">
             <div className="h-full rounded-3xl border border-cream-50/10 bg-plum-800/70 p-8 backdrop-blur-sm">
-              <h3 className="font-display text-xl text-cream-50">{contact.company}</h3>
-              <p className="mt-1 text-sm text-gold-300">Manufacturer &amp; Marketer</p>
+              <h3 className="font-display text-xl text-cream-50">
+                Melicura<span className="align-super text-[0.6em] text-gold-400">™</span>
+              </h3>
+              <p className="mt-1 text-sm text-gold-300">Manufactured &amp; Marketed by {contact.company}</p>
 
               <div className="mt-8 space-y-6">
                 <div className="flex gap-4">
@@ -62,21 +64,9 @@ export default function Contact() {
                     <MapPinIcon className="h-5 w-5" />
                   </span>
                   <div>
-                    <p className="text-sm font-semibold text-cream-50">Manufactured &amp; Marketed by</p>
+                    <p className="text-sm font-semibold text-cream-50">Location</p>
                     <p className="mt-1 text-sm leading-relaxed text-cream-100/70">
-                      {contact.manufacturerAddress}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold-400/10 text-gold-300">
-                    <MapPinIcon className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="text-sm font-semibold text-cream-50">Write to {contact.careName}</p>
-                    <p className="mt-1 text-sm leading-relaxed text-cream-100/70">
-                      {contact.careAddress}
+                      {contact.address}
                     </p>
                   </div>
                 </div>

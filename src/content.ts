@@ -9,7 +9,10 @@ export const nav = [
 ]
 
 export const contact = {
+  brand: 'Melicura™',
   company: 'Sri Murugan Enterprises',
+  address:
+    'No. 4/654, 9th Street, Vinayagapuram, Karanipuduchery, Urappakkam, Changalpattu, Chennai - 606210, Tamil Nadu, India.',
   manufacturerAddress:
     'No. 4/654, 9th Street, Vinayagapuram, Karanipuduchery, Urappakkam, Changalpattu, Chennai - 606210, Tamil Nadu, India.',
   careName: 'Melicura Care',
