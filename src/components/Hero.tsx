@@ -159,13 +159,13 @@ export default function Hero() {
                 {/* Subtle gradient vignette at bottom for seamless blend */}
                 <div className="absolute inset-x-0 bottom-0 h-20 sm:h-28 bg-gradient-to-t from-plum-950 via-plum-950/50 to-transparent pointer-events-none" />
 
-                {/* Overlaid Banner Action Bar (Zoycare style Shop Now CTA) */}
-                <div className="absolute bottom-5 sm:bottom-7 inset-x-3 sm:inset-x-8 max-w-7xl mx-auto flex items-center justify-between pointer-events-none">
-                  <div className="hidden sm:block text-left drop-shadow-md max-w-md">
-                    <span className="inline-block px-3 py-0.5 rounded-full bg-gold-400/25 text-gold-300 border border-gold-400/30 text-xs font-semibold tracking-wider uppercase backdrop-blur-md mb-1 shadow-sm">
+                {/* Overlaid Banner Action Bar — text + Shop Now visible on all screen sizes */}
+                <div className="absolute bottom-5 sm:bottom-7 inset-x-3 sm:inset-x-8 max-w-7xl mx-auto flex items-end justify-between gap-3 pointer-events-none">
+                  <div className="text-left drop-shadow-md max-w-[60%] sm:max-w-md">
+                    <span className="inline-block px-2.5 py-0.5 rounded-full bg-plum-950/70 text-gold-300 border border-gold-400/40 text-[10px] sm:text-xs font-bold tracking-wider uppercase backdrop-blur-md mb-1 shadow-sm">
                       {slide.title}
                     </span>
-                    <p className="text-xs sm:text-sm font-medium text-cream-100/95 drop-shadow truncate">
+                    <p className="text-[11px] sm:text-sm font-semibold text-cream-50 drop-shadow-lg leading-snug line-clamp-2">
                       {slide.subtitle}
                     </p>
                   </div>
@@ -174,11 +174,11 @@ export default function Hero() {
                     href={whatsappConfig.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="pointer-events-auto ml-auto inline-flex items-center gap-2 rounded-full bg-gold-400 hover:bg-gold-300 text-plum-950 px-5 sm:px-7 py-2 sm:py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider shadow-gold hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 shrink-0 group"
+                    className="pointer-events-auto inline-flex items-center gap-1.5 sm:gap-2 rounded-full bg-gold-400 hover:bg-gold-300 text-plum-950 px-4 sm:px-7 py-2 sm:py-2.5 text-[11px] sm:text-sm font-bold uppercase tracking-wider shadow-gold hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 shrink-0 group whitespace-nowrap"
                   >
                     <span>Shop Now</span>
                     <svg
-                      className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-hover:translate-x-1"
+                      className="w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-300 group-hover:translate-x-1"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                     >
@@ -245,19 +245,19 @@ export default function Hero() {
 
       {/* Trust & Features Ribbon directly beneath the Slideshow (Zoycare D2C Style) */}
       <div className="w-full border-t border-gold-400/20 bg-plum-900/90 backdrop-blur-md py-4 sm:py-6 px-4 sm:px-8">
-        <div className="mx-auto max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        <div className="mx-auto max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
           {trustBadges.map((badge, idx) => {
             const Icon = badge.icon
             return (
-              <div key={idx} className="flex items-center gap-3 text-left">
-                <div className="flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-xl bg-gold-400/15 border border-gold-400/30 text-gold-300 shadow-sm">
-                  <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
+              <div key={idx} className="flex items-center gap-2 sm:gap-3 text-left">
+                <div className="flex h-9 w-9 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-xl bg-gold-400/15 border border-gold-400/30 text-gold-300 shadow-sm">
+                  <Icon className="h-4 w-4 sm:h-6 sm:w-6" />
                 </div>
-                <div>
-                  <h3 className="text-xs sm:text-sm font-bold text-cream-50 leading-tight">
+                <div className="min-w-0">
+                  <h3 className="text-[11px] sm:text-sm font-bold text-cream-50 leading-tight">
                     {badge.title}
                   </h3>
-                  <p className="text-[11px] sm:text-xs text-cream-100/70 truncate">{badge.desc}</p>
+                  <p className="text-[10px] sm:text-xs text-cream-100/70 leading-tight mt-0.5 break-words">{badge.desc}</p>
                 </div>
               </div>
             )
