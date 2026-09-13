@@ -6,14 +6,12 @@ import { CheckIcon } from './icons'
 import kumariImg from '../assets/images/herb-kumari.webp'
 import mahanimbaImg from '../assets/images/herb-mahanimba.webp'
 import pudinaImg from '../assets/images/herb-pudina.webp'
-import karpasaImg from '../assets/images/herb-karpasa.webp'
 import turmericBg from '../assets/backgrounds/turmeric-root.webp'
 
 const images: Record<string, string> = {
   kumari: kumariImg,
   mahanimba: mahanimbaImg,
   pudina: pudinaImg,
-  karpasa: karpasaImg,
 }
 
 export default function HerbalCare() {
@@ -40,7 +38,7 @@ export default function HerbalCare() {
           </p>
         </Reveal>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 mx-auto max-w-5xl grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {herbs.map((herb, i) => (
             <Reveal
               key={herb.name}
