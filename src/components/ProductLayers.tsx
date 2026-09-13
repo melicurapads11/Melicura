@@ -3,7 +3,7 @@ import Reveal from './Reveal'
 import SectionBackground from './SectionBackground'
 import SectionDivider from './SectionDivider'
 import darkFoliageBg from '../assets/backgrounds/dark-foliage.webp'
-import padPartition from '../assets/images/pad-partition-clean.webp'
+import padAnatomyHerbs from '../assets/images/pad-anatomy-herbs.webp'
 
 
 export default function ProductLayers() {
@@ -27,19 +27,21 @@ export default function ProductLayers() {
         </Reveal>
 
         <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
-          {/* Pad + Partition visual */}
+          {/* Pad anatomy with herbs visual */}
           <Reveal className="flex justify-center">
             <div className="relative w-full max-w-xs sm:max-w-sm">
-              {/* Glow behind pad */}
-              <div className="absolute inset-0 -z-10 rounded-full bg-[radial-gradient(circle,rgba(139,137,73,0.28),transparent_60%)] blur-3xl" />
-              <img
-                src={padPartition}
-                alt="Melicura pad cross-section showing the herbal partition layers"
-                className="w-full drop-shadow-2xl transition-transform duration-700 hover:scale-[1.03]"
-                loading="lazy"
-                width={365}
-                height={725}
-              />
+              {/* Subtle warm glow behind pad */}
+              <div className="absolute inset-0 -z-10 rounded-3xl bg-[radial-gradient(ellipse,rgba(220,210,160,0.35),transparent_70%)] blur-2xl" />
+              <div className="overflow-hidden rounded-3xl bg-[#f0ecdc]/60 p-4 shadow-2xl backdrop-blur-sm ring-1 ring-white/20">
+                <img
+                  src={padAnatomyHerbs}
+                  alt="Melicura pad anatomy showing Melia Dubia, Aloe Vera and Mint herbal infusion"
+                  className="w-full transition-transform duration-700 hover:scale-[1.03] drop-shadow-xl"
+                  loading="lazy"
+                  width={720}
+                  height={1024}
+                />
+              </div>
             </div>
           </Reveal>
 
