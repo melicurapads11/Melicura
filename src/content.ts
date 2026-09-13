@@ -22,6 +22,14 @@ export const contact = {
   email: 'melicurapads@gmail.com',
 }
 
+export const whatsappConfig = {
+  phone: '919940540837',
+  message: 'Hi Melicura! I would like to order Melicura Herbal Sanitary Pads.',
+  get url() {
+    return `https://wa.me/${this.phone}?text=${encodeURIComponent(this.message)}`
+  },
+}
+
 export const productSpec = {
   brand: 'Melicura™',
   category: 'Herbal Sanitary Pads',

@@ -51,7 +51,7 @@ export default function SectionBackground({
         alt=""
         role="presentation"
         loading={priority ? 'eager' : 'lazy'}
-        fetchPriority={priority ? 'high' : 'auto'}
+        {...(priority ? { fetchpriority: 'high' } : {})}
         data-parallax={parallax || undefined}
         className={`h-[calc(100%+80px)] w-full object-cover ${zoom ? 'animate-bg-zoom' : ''}`}
         style={{ objectPosition: position }}
