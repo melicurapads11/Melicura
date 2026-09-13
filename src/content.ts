@@ -42,8 +42,7 @@ export const whyMelicura = [
   { title: 'Dual Wing Protection', desc: 'Wider back and dual wings for extra security.', icon: 'wing' },
   { title: 'Breathable Design', desc: 'Allows airflow while keeping moisture locked.', icon: 'wind' },
   { title: 'No Toxins', desc: 'Free from harsh chemicals.', icon: 'flask' },
-  { title: 'Plastic-Free Top Sheet', desc: 'A gentler, more conscious top layer.', icon: 'cotton' },
-  { title: 'Dermatologically Tested', desc: 'Checked for skin safety and comfort.', icon: 'badge' },
+  { title: 'No Artificial Fragrance', desc: 'Pure and gentle — no synthetic scents added.', icon: 'sparkle' },
   { title: 'Eco-Conscious Disposal', desc: 'Dispose responsibly, for a better planet.', icon: 'recycle' },
   { title: 'Made in India', desc: 'Proudly manufactured in India.', icon: 'india' },
 ]
@@ -119,9 +118,8 @@ export const benefits = [
 ]
 
 export const trustPoints = [
-  { title: 'Dermatologically Tested', icon: 'badge' },
   { title: 'Safe & Gentle on Skin', icon: 'heart' },
-  { title: 'Plastic-Free Top Sheet', icon: 'cotton' },
+  { title: 'No Artificial Fragrance', icon: 'sparkle' },
   { title: 'Herbs Infused', icon: 'leaf' },
   { title: 'Dispose Responsibly', icon: 'dispose' },
   { title: 'Made in India', icon: 'india' },

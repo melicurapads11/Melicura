@@ -3,15 +3,8 @@ import Reveal from './Reveal'
 import SectionBackground from './SectionBackground'
 import SectionDivider from './SectionDivider'
 import darkFoliageBg from '../assets/backgrounds/dark-foliage.webp'
+import padPartition from '../assets/images/pad-partition-clean.webp'
 
-const layerColors = [
-  'bg-cream-50 border-cream-300',
-  'bg-olive-200 border-olive-400',
-  'bg-olive-300 border-olive-500',
-  'bg-gold-200 border-gold-400',
-  'bg-plum-500/20 border-plum-600/40',
-  'bg-plum-800 border-plum-700',
-]
 
 export default function ProductLayers() {
   return (
@@ -34,35 +27,19 @@ export default function ProductLayers() {
         </Reveal>
 
         <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
-          {/* Visual stack */}
+          {/* Pad + Partition visual */}
           <Reveal className="flex justify-center">
-            <div className="relative w-full max-w-sm">
-              {layers.map((layer, i) => (
-                <div
-                  key={layer.name}
-                  className="group relative mx-auto -mt-3 first:mt-0"
-                  style={{ zIndex: layers.length - i, width: `${100 - i * 6}%` }}
-                >
-                  <div
-                    className={`flex items-center justify-between rounded-xl border px-5 py-3.5 shadow-lg backdrop-blur-sm transition-all duration-500 hover:-translate-x-1 hover:shadow-gold ${layerColors[i]}`}
-                  >
-                    <span
-                      className={`font-display text-sm ${
-                        i >= 4 ? 'text-cream-50' : 'text-plum-900'
-                      }`}
-                    >
-                      {layer.name}
-                    </span>
-                    <span
-                      className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold ${
-                        i >= 4 ? 'bg-gold-400 text-plum-900' : 'bg-plum-800 text-gold-300'
-                      }`}
-                    >
-                      {i + 1}
-                    </span>
-                  </div>
-                </div>
-              ))}
+            <div className="relative w-full max-w-xs sm:max-w-sm">
+              {/* Glow behind pad */}
+              <div className="absolute inset-0 -z-10 rounded-full bg-[radial-gradient(circle,rgba(139,137,73,0.28),transparent_60%)] blur-3xl" />
+              <img
+                src={padPartition}
+                alt="Melicura pad cross-section showing the herbal partition layers"
+                className="w-full drop-shadow-2xl transition-transform duration-700 hover:scale-[1.03]"
+                loading="lazy"
+                width={365}
+                height={725}
+              />
             </div>
           </Reveal>
 

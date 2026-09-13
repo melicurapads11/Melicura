@@ -1,4 +1,4 @@
-import packageFront from '../assets/images/package-front.webp'
+import padHerbsShowcase from '../assets/images/pad-herbs-showcase.webp'
 import backDesign from '../assets/images/back-design.webp'
 import showcaseBg from '../assets/backgrounds/leaves-bowl.webp'
 import Reveal from './Reveal'
@@ -45,13 +45,14 @@ export default function ProductShowcase() {
           <Reveal className="order-1 lg:order-2" delay={2}>
             <div className="relative mx-auto max-w-sm">
               <div className="absolute inset-0 -z-10 rounded-full bg-[radial-gradient(circle,rgba(139,137,73,0.18),transparent_65%)] blur-2xl" />
+              {/* Full package front for desktop, pad+herbs for featured view */}
               <img
-                src={packageFront}
-                alt="Melicura Herbal Sanitary Pads XL package, front view"
+                src={padHerbsShowcase}
+                alt="Melicura Herbal Sanitary Pad with Melia Dubia, Aloe Vera and Mint herbs"
                 className="w-full drop-shadow-2xl"
                 loading="lazy"
-                width={1300}
-                height={969}
+                width={584}
+                height={830}
               />
             </div>
           </Reveal>
