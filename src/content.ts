@@ -25,8 +25,13 @@ export const contact = {
 export const productSpec = {
   brand: 'Melicura™',
   category: 'Herbal Sanitary Pads',
-  variant: 'XL – Extra Long',
-  length: '280 mm',
+  variants: [
+    { label: 'XL – Extra Long', length: '280 mm', pack: '6 N Pads' },
+    { label: 'XXL – Extra Extra Long', length: '320 mm', pack: '6 N Pads' },
+  ],
+  // Legacy single fields for backward compat
+  variant: 'XL – Extra Long / XXL – Extra Extra Long',
+  length: '280 mm / 320 mm',
   pack: '6 N Pads',
   manufacturer: 'Sri Murugan Enterprises',
   barcode: '8906123450125',
@@ -34,15 +39,16 @@ export const productSpec = {
 }
 
 export const whyMelicura = [
-  { title: 'Herbal Infused', desc: 'Goodness of herbs for everyday care.', icon: 'leaf' },
+  { title: 'Herbal Infused', desc: 'Goodness of 3 herbs for everyday care.', icon: 'leaf' },
+  { title: 'Herbs Benefits', desc: 'Nature-powered protection from Melia Dubia, Aloe Vera & Mint.', icon: 'sparkle' },
+  { title: 'Quick Absorption up to 80ml', desc: 'Absorbs up to 80ml — keeps you dry and comfortable.', icon: 'droplet' },
+  { title: 'Super Soft, Super Thin', desc: 'Feather-light design that moves with you.', icon: 'feather' },
+  { title: 'Free from Artificial Fragrance', desc: 'No synthetic scents — pure and gentle on skin.', icon: 'flask' },
+  { title: 'For Women, By Women', desc: 'Crafted with care for every woman\'s everyday comfort.', icon: 'heart' },
   { title: '6 Layer Protection', desc: 'For your complete peace of mind.', icon: 'layers' },
-  { title: 'Ultra Quick Absorption', desc: 'Keeps you dry and comfortable.', icon: 'droplet' },
-  { title: 'Extra Long Length', desc: '280mm coverage for long lasting protection.', icon: 'ruler' },
-  { title: 'Soft & Comfortable', desc: 'Thin, soft design that moves with you.', icon: 'feather' },
   { title: 'Dual Wing Protection', desc: 'Wider back and dual wings for extra security.', icon: 'wing' },
   { title: 'Breathable Design', desc: 'Allows airflow while keeping moisture locked.', icon: 'wind' },
-  { title: 'No Toxins', desc: 'Free from harsh chemicals.', icon: 'flask' },
-  { title: 'No Artificial Fragrance', desc: 'Pure and gentle — no synthetic scents added.', icon: 'sparkle' },
+  { title: 'XL & XXL Sizes', desc: '280mm XL and 320mm XXL for every body.', icon: 'ruler' },
   { title: 'Eco-Conscious Disposal', desc: 'Dispose responsibly, for a better planet.', icon: 'recycle' },
   { title: 'Made in India', desc: 'Proudly manufactured in India.', icon: 'india' },
 ]
@@ -61,8 +67,8 @@ export const herbs = [
     ],
   },
   {
-    name: 'Mahanimba',
-    common: 'Melia Azedarach',
+    name: 'Malai Vembu',
+    common: 'Melia Dubia',
     image: 'mahanimba',
     points: [
       'Helps maintain hygiene',
@@ -82,17 +88,6 @@ export const herbs = [
       'Supports skin cleanliness',
       'Helps reduce odour',
       'Offers soothing comfort',
-    ],
-  },
-  {
-    name: 'Karpasa Beeja',
-    common: 'Cotton Seed',
-    image: 'karpasa',
-    points: [
-      'Supports feminine wellness',
-      'Promotes tissue nourishment',
-      'Traditionally used for women’s health',
-      'Supports natural comfort during menstrual cycle',
     ],
   },
 ]
@@ -118,10 +113,10 @@ export const benefits = [
 ]
 
 export const trustPoints = [
-  { title: 'Safe & Gentle on Skin', icon: 'heart' },
+  { title: 'For Women, By Women', icon: 'heart' },
   { title: 'No Artificial Fragrance', icon: 'sparkle' },
-  { title: 'Herbs Infused', icon: 'leaf' },
-  { title: 'Dispose Responsibly', icon: 'dispose' },
+  { title: '3 Herbs Infused', icon: 'leaf' },
+  { title: 'XL & XXL Sizes', icon: 'ruler' },
   { title: 'Made in India', icon: 'india' },
   { title: '6-Layer Protection', icon: 'layers' },
 ]

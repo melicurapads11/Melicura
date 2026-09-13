@@ -85,13 +85,13 @@ export default function Hero() {
             </div>
             <span className="h-8 w-px bg-cream-100/20" />
             <div className="text-center lg:text-left">
-              <p className="font-display text-2xl text-gold-300">280mm</p>
-              <p className="text-xs uppercase tracking-wider">Extra Long XL</p>
+              <p className="font-display text-2xl text-gold-300">80ml</p>
+              <p className="text-xs uppercase tracking-wider">Quick Absorption</p>
             </div>
             <span className="h-8 w-px bg-cream-100/20" />
             <div className="text-center lg:text-left">
-              <p className="font-display text-2xl text-gold-300">100%</p>
-              <p className="text-xs uppercase tracking-wider">Herbal Infused</p>
+              <p className="font-display text-xl text-gold-300">XL &amp; XXL</p>
+              <p className="text-xs uppercase tracking-wider">280mm &amp; 320mm</p>
             </div>
           </div>
         </div>
@@ -107,10 +107,10 @@ export default function Hero() {
             </div>
             <img
               src={packageFront}
-              alt="Melicura Herbal Sanitary Pads, XL 280mm, 6 pad pack"
+              alt="Melicura Herbal Sanitary Pads — XL 280mm &amp; XXL 320mm, 6 pad pack"
               className="relative w-full drop-shadow-[0_35px_60px_rgba(0,0,0,0.45)] animate-float"
               width={1300}
-              height={969}
+              height={968}
             />
           </div>
         </div>

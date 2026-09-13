@@ -5,13 +5,12 @@ import SectionDivider from './SectionDivider'
 import backDesign from '../assets/images/back-design.webp'
 import aloeBg from '../assets/backgrounds/hero-aloe.webp'
 
-const rows: [string, string][] = [
+const commonRows: [string, string][] = [
   ['Brand', productSpec.brand],
   ['Category', productSpec.category],
-  ['Variant', productSpec.variant],
-  ['Length', productSpec.length],
-  ['Pack', productSpec.pack],
   ['Manufacturer / Marketer', productSpec.manufacturer],
+  ['Best Before', productSpec.bestBefore],
+  ['Pack', '6 N Pads'],
 ]
 
 export default function ProductDetails() {
@@ -46,11 +45,29 @@ export default function ProductDetails() {
 
           <Reveal delay={1}>
             <div className="overflow-hidden rounded-2xl border border-plum-900/10 bg-white shadow-soft">
-              {rows.map(([label, value], i) => (
+              {/* Size variant header row */}
+              <div className="grid grid-cols-3 border-b border-plum-900/8 bg-plum-900 px-6 py-3 text-xs font-semibold uppercase tracking-wider text-gold-300">
+                <span>Specification</span>
+                <span className="text-center">XL</span>
+                <span className="text-center">XXL</span>
+              </div>
+              {/* Variant-specific rows */}
+              <div className="grid grid-cols-3 items-center border-b border-plum-900/8 bg-cream-50/60 px-6 py-4 gap-4">
+                <span className="text-xs font-semibold uppercase tracking-wider text-plum-800/50">Size</span>
+                <span className="text-center font-display text-base text-plum-900">XL – Extra Long</span>
+                <span className="text-center font-display text-base text-plum-900">XXL – Extra Extra Long</span>
+              </div>
+              <div className="grid grid-cols-3 items-center border-b border-plum-900/8 px-6 py-4 gap-4">
+                <span className="text-xs font-semibold uppercase tracking-wider text-plum-800/50">Length</span>
+                <span className="text-center font-display text-base text-plum-900">280 mm</span>
+                <span className="text-center font-display text-base text-plum-900">320 mm</span>
+              </div>
+              {/* Common rows */}
+              {commonRows.map(([label, value], i) => (
                 <div
                   key={label}
                   className={`flex flex-col gap-1 px-6 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4 ${
-                    i !== rows.length - 1 ? 'border-b border-plum-900/8' : ''
+                    i !== commonRows.length - 1 ? 'border-b border-plum-900/8' : ''
                   } ${i % 2 === 0 ? 'bg-cream-50/60' : ''}`}
                 >
                   <span className="text-xs font-semibold uppercase tracking-wider text-plum-800/50">

@@ -35,8 +35,8 @@ export default function HerbalCare() {
             Powered by Nature. Inspired by Ayurveda.
           </h2>
           <p className="mt-5 text-base leading-relaxed text-plum-800/75 sm:text-lg">
-            Melicura is enriched with four time-tested herbs, traditionally valued in Ayurvedic
-            texts for their natural care and support to women's comfort and hygiene.
+            Melicura is enriched with three time-honoured herbs — Melia Dubia, Aloe Vera and Mint
+            — traditionally valued for their natural care and support to women's comfort and hygiene.
           </p>
         </Reveal>
 

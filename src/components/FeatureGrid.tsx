@@ -19,7 +19,7 @@ export default function FeatureGrid() {
             <span className="h-px w-8 bg-gold-400" />
           </p>
           <h2 className="mt-4 font-display text-3xl leading-tight text-cream-50 sm:text-4xl lg:text-[2.6rem]">
-            Eleven reasons women trust Melicura every day
+            Twelve reasons women trust Melicura every day
           </h2>
           <p className="mt-5 text-base leading-relaxed text-cream-100/70 sm:text-lg">
             Thoughtful, herbal-infused protection — built into every layer of the pad.
